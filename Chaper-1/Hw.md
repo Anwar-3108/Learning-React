@@ -25,6 +25,7 @@ A.4 >  In ReactJS, Cross-Origin Resource Sharing (CORS) refers to the method tha
 
 
 Q.5 > What is the difference between async and difer ?
+
 A.5 > Async allows your script to run as soon as it's loaded, without blocking other elements on the page. Defer means your script will only execute after the page has finished loading. In most cases, async is the better option
 
 ---------------Async And  Defer---------------
@@ -33,7 +34,6 @@ A.5 > Async allows your script to run as soon as it's loaded, without blocking o
 
 
  Q.6 > What is async in script tag in JavaScript?
-
 
 A.6 > Async in script tag in JavaScript is a way to load scripts asynchronously. That means, if a script is async, it will be loaded independently of other scripts on the page, and will not block the page from loading.
 
