@@ -1,4 +1,8 @@
 /*
+
+============    NOTE    ==========
+
+
 * Hot Module Reloading
 
 *File Watcher Algo
@@ -25,34 +29,36 @@
 
 *consistent Hashing algorithms
 
+*it's a zero config bundler
 
+*it has Transitive Dependencies means parcel is dependent on node packages and that node packages are also dependent on some files ans so on  (makes dependency tree)
+
+
+
+
+
+==================================
 */
 
+import React from "react";
+import ReactDOM from "react-dom/client";
 
+const h1 = React.createElement(
+  "h1",
+  { className: "heading1" },
+  "Hey! I'm Heading 1 form parcel"
+);
 
+const h2 = React.createElement(
+  "h2",
+  { className: "heading2" },
+  "Hey! I'm Heading2 form parcel"
+);
 
+const container = React.createElement("div", { className: "container" }, [
+  h1,
+  h2,
+]);
 
-
-
-
-
-
-
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-
-
-
-const h1 =  React.createElement('h1' ,{className:"heading1"} ,"Hey! I'm Heading 1 form parcel") ;
-
-const h2 = React.createElement('h2' ,{className:"heading2"},  "Hey! I'm Heading2 form parcel") ;
-
-const container = React.createElement('div' , {className:"container"} ,[h1,h2]) ;
-
-
-
-
-const root =  ReactDOM.createRoot(document.getElementById('root')) ;
-root.render(container) ;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(container);

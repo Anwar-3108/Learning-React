@@ -72,4 +72,37 @@ here index.html is a enty point of the App  , when I run the npx parcel index.ht
 
 this command also creates a faster development version of our project and runs it on the local server .
 
-NOTE : Anything which we generate on  server should be put inside.gitignore 
+NOTE : Anything which we generate on  server should be kept inside.gitignore 
+
+Note: Parcel is dependent on node packages , node packages are also depending on some thing and so on , so this is called ** " TRANSITIVE DEPENDENCIES" **   
+
+
+
+
+**** Read Parcel Docs ****
+
+
+
+
+
+
+========= Recap ==========
+
+npm init : gave us package.json ;
+
+#then---->
+
+npx i -D parcel :  to  insall  parcel 
+-D stands for Dev-Dependencies
+
+#then---->
+
+npx parcel index.html : to exicute the project
+
+
+
+
+
+
+
+
