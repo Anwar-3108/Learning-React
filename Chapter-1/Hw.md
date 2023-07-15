@@ -53,3 +53,8 @@ A.7 > By using the defer attribute in HTML, the browser will load the script onl
 To use defer, simply add the defer attribute to your script tag:
 
 <!-- <script defer src="script.js"></script> -->
+
+
+Q.8 > What is the difference between Library and framework ?
+
+A.8 > 
