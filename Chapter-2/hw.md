@@ -7,7 +7,7 @@ NOTE: NPM Doesn't stand for " Node Package Manager".
 
 Q.2  > What are Bundler ?
 
-A.2 > 
+A.2 > parcel is a bundler
 
 Q.3 > What are dipendencies ?
 
@@ -47,3 +47,29 @@ Q.7 > Why we got Node_modules when we installed parcel?
 A.7 > Node_modules is like a data base .
 whenever we instsll something it get install in our node_module
 
+
+
+
+
+
+
+
+
+
+
+NOTE: Modules can be import and export,  we can't import scripts inside a tag.
+
+
+NOTE: when we save our file it automatically relodes the page it , this concept is known as Hot Module Reloading (HMR) HMR is using file watcher algorithm which is writen in c++;
+the live server which is embedded in side parcel keeps a track of our all  changes.
+
+NOTE : to start the parcel server npx parcel index.html
+
+we use npx to execute some thing 
+without installing them globally or locally
+
+here index.html is a enty point of the App  , when I run the npx parcel index.html , it installed 2 other files ".parcel-cache" , "dist" 
+
+this command also creates a faster development version of our project and runs it on the local server .
+
+NOTE : Anything which we generate on  server should be put inside.gitignore 
