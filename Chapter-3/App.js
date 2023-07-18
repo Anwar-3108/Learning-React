@@ -1,14 +1,33 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+const Title =()=>{
+  return (<>
 
-const h1 = React.createElement('h1',{className:"h1"},"heading1");
-const h2 = React.createElement('h2',{className:"h2"},"heading2");
+<h1>Hey ! I'm Title</h1>
+
+  </>)
 
 
-const container=  React.createElement('div',{className:"componenet"},[h1,h2]);
+
+    
+
+}
+
+
+
+const Container=()=>{
+    return (<>
+
+
+    <Title/>
+    <h1>Hey!! I'm Functional  Component </h1>
+
+
+    </>)
+}
 
 
 const root =  ReactDOM.createRoot(document.getElementById('root')) ;
-root.render(container);
+root.render(<Container/>);
 

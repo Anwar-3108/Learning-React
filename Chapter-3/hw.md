@@ -11,4 +11,18 @@ A.2 > Babble is a just JS package/ Libraby/ Node package. it's like a black box 
 
 
 
+
+
+
+Q.3 > What is sanitization??
+
+A.3 > 
+
+
+Q.4 > What is component composition ?
+
+A.4 > when we call/invoke ka functional component inside another functional component it is called component composition , here we are composing a component inside another component.
+
+
+
  
