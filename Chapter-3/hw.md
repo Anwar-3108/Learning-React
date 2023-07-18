@@ -25,4 +25,67 @@ A.4 > when we call/invoke ka functional component inside another functional comp
 
 
 
- 
+ Q.5 > what is JSX ? Difference between HTML and JSX ?
+ A.5 > 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ***RECAP****
+
+
+
+
+ created scripts as a key  inside Package.json
+
+ then --->
+
+installed remove console.log plugh-in 
+
+then --->
+created  .babelrc file and configured that 
+
+then --->
+
+browserList
+
+then --->
+
+added keys in h1 , h2 
+to keep a track react has a concept of keys
+
+Diffing  algorithm
+
+
+then -->
+
+JSX 
+at the end of the day jsx using react.createElement() ,react.createElement()  gives us an object 
+and object gets into html DOM
+
+
+
+then ----> 
+
+Read  React reconcilation
+
+then ---> 
+React ELement
+
+then ---> 
+
+functional componenet
+
+then ---> 
+
+component composition
