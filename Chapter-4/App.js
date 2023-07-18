@@ -1,24 +1,54 @@
 import React from "react";
-import ReactDOM from 'react-dom/client'
+import ReactDOM from "react-dom/client";
 
-
-const Title =()=>{
-    return(
-        <>
-            <h1>Title</h1>
-        </>
-
-    )
-}
-
-const Comp=()=>{
+const Title=()=>{
     return(<>
-            <Title/>
-        <h1>Hey! I'm Componenet.</h1>
 
+    <h1>Food Villa</h1>
     </>)
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const Comp = () => {
+  return (
+    <>
+      <Title/>
+      <h1>Hey! I'm Componenet.</h1>
+    </>
+  );
+};
 
-root.render(<Comp/>)
+
+const Applayout=()=>{
+    return(<>
+
+{/*
+header 
+        -logo
+        -navigations
+        -cart
+        -
+
+body
+    -search 
+    -restrauntList
+       -restrauntcard
+            -img
+            -description
+            -price
+            -rating
+            -cusines
+
+footer
+    -links
+    -copyright
+
+*/}
+
+
+
+    <Comp/>
+    </>)
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<Applayout />);
