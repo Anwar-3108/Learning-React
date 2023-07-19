@@ -1,0 +1,26 @@
+{
+  "name": "chapter-5",
+  "version": "1.0.0",
+  "description": "this is chapter 5",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anwar-3108/Learning-React.git"
+  },
+  "author": "syed anwar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anwar-3108/Learning-React/issues"
+  },
+  "homepage": "https://github.com/Anwar-3108/Learning-React#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

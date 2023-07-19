@@ -1,0 +1,40 @@
+.header-div{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 15px ;
+    padding: 10px;
+}
+
+.nav-links>ul{
+    display: flex;
+    text-decoration:none ;
+    list-style: none;
+    margin-right: 15px;
+}
+.nav-links>ul>li{
+    margin: 5px;
+}
+.cardList{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-top: 1rem;
+    
+}
+.card-div{
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 2%;
+    margin-top: 5%;
+    padding: 10px;
+}
+.card-div>.img-div>img{
+    width: 100%;
+}
+
+.footer{
+    background: black;
+    color: white;
+    text-align: center;
+}
