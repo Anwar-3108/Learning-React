@@ -188,16 +188,16 @@ const restrauntList = [
   },
 ];
 
-const RestrauntCard = ({restraunt}) => {
-  console.log(restraunt);
+const RestrauntCard = ({image, name, price,rating,cusines}) => {
+  // const {=restraunt;
   return (
     <>
       <div className="card">
-        <img src={restraunt?.image} alt="" />
-        <h1>{restraunt?.name}</h1>
-        <h2>{restraunt?.price}</h2>
-        <h3>{restraunt?.rating}</h3>
-        <h4>{restraunt?.cusines.join(",")}</h4>
+        <img src={image} alt="" />
+        <h1>{name}</h1>
+        <h2>{price}</h2>
+        <h3>{rating}</h3>
+        <h4>{cusines}</h4>
         
       </div>
     </>
@@ -209,12 +209,19 @@ const Body = () => {
     <>
       <div className="restrauntlist">
         {/* {RestrauntCard(restrauntList[0])} */}
-        <RestrauntCard restraunt={restrauntList[0]} hello={"world"} />
-        <RestrauntCard restraunt={restrauntList[1]} />
-        <RestrauntCard restraunt={restrauntList[2]} />
-        <RestrauntCard restraunt={restrauntList[3]} />
+        <RestrauntCard name={restrauntList[0].name} image={restrauntList[0].image} price={restrauntList[0].price} cusines={restrauntList[0].cusines}  rating={restrauntList[0].rating} />
+
+        <RestrauntCard name={restrauntList[1].name} image={restrauntList[1].image} price={restrauntList[1].price} cusines={restrauntList[1].cusines}  rating={restrauntList[1].rating} />
+        
+        <RestrauntCard name={restrauntList[2].name} image={restrauntList[2].image} price={restrauntList[2].price} cusines={restrauntList[2].cusines}  rating={restrauntList[2].rating} />
+
+        <RestrauntCard name={restrauntList[3].name} image={restrauntList[3].image} price={restrauntList[3].price} cusines={restrauntList[3].cusines}  rating={restrauntList[3].rating} />
+
+
+
+        {/* <RestrauntCard restraunt={restrauntList[3]} />
         <RestrauntCard restraunt={restrauntList[4]} />
-        <RestrauntCard restraunt={restrauntList[5]} />
+        <RestrauntCard restraunt={restrauntList[5]} /> */}
       </div>
     </>
   );
