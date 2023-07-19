@@ -206,6 +206,16 @@ const Body = () => {
   return (
     <>
       <div className="restrauntlist">
+
+{restrauntList.map((data)=>{
+  return (
+    <RestrauntCard {...data} key={data.id} />
+  )
+})}
+
+
+
+
         {/* {RestrauntCard(restrauntList[0])} */}
         {/* <RestrauntCard name={restrauntList[0].name} image={restrauntList[0].image} price={restrauntList[0].price} cusines={restrauntList[0].cusines}  rating={restrauntList[0].rating} />
 
