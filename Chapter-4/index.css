@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -20,4 +16,19 @@
 
 .nav-links > ul > li {
   padding: 10px;
+}
+.card{
+    width: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5%;
+    border-radius: 10px;
+}
+.card >img{
+    width: 100%;
+}
+.restrauntlist{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
 }
