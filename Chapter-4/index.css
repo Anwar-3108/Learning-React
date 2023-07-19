@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.logo {
+  width: 70px;
+}
+.nav-links > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links > ul > li {
+  padding: 10px;
+}
