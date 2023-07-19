@@ -188,16 +188,16 @@ const restrauntList = [
   },
 ];
 
-const RestrauntCard = (props) => {
-  console.log(props);
+const RestrauntCard = ({restraunt}) => {
+  console.log(restraunt);
   return (
     <>
       <div className="card">
-        <img src={props.restraunt?.image} alt="" />
-        <h1>{props.restraunt?.name}</h1>
-        <h2>{props.restraunt?.price}</h2>
-        <h3>{props.restraunt?.rating}</h3>
-        <h4>{props.restraunt?.cusines.join(",")}</h4>
+        <img src={restraunt?.image} alt="" />
+        <h1>{restraunt?.name}</h1>
+        <h2>{restraunt?.price}</h2>
+        <h3>{restraunt?.rating}</h3>
+        <h4>{restraunt?.cusines.join(",")}</h4>
         
       </div>
     </>
