@@ -63,11 +63,11 @@ const Body = () => {
     </>
   );
 };
-
+const styleObj={background:"black", color:"white"}
 const Footer = () => {
   return (
     <>
-      <h3 style={{background:"black",color:"white", display:"flex",alignItems:"center",justifyContent:"center"}}>Footer</h3>
+      <h3 style={styleObj}>Footer</h3>
     </>
   );
 };
