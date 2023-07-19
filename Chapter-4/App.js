@@ -136,7 +136,7 @@ const restrauntList = [
     name: "Burger King",
     image:
       "https://res.cloudinary.com/purnesh/image/upload/w_1080,f_auto/butterfly-chicken-burger.jpg",
-
+      id:"1" ,
     price: " Rs 250/-",
     rating: "4.2",
     cusines: ["Burgers ", " Amarican"],
@@ -145,7 +145,7 @@ const restrauntList = [
     name: " Veg Pizza",
     image:
       "https://imgmedia.lbb.in/media/2020/02/5e58fb96227dbe1b8e53ada4_1582889878493.png",
-
+      id:"2" ,
     price: " Rs 450/-",
     rating: "4.2",
     cusines: ["Pizza ", " Indian"],
@@ -154,7 +154,7 @@ const restrauntList = [
     name: "West Thali",
     image:
       "https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2019/08/1280-Indian-food.jpg",
-
+      id:"3" ,
     price: " Rs 530/-",
     rating: "5.2",
     cusines: ["Thali ", " Indian", "West", "Veg and Non-Veg"],
@@ -163,7 +163,7 @@ const restrauntList = [
     name: "Idli Dosa",
     image:
       "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/SouthIndian_a5ivgy",
-
+      id:"4" ,
     price: " Rs 280/-",
     rating: "4.7",
     cusines: ["Idli and Dosa  ", " Indian", "Veg"],
@@ -172,7 +172,7 @@ const restrauntList = [
     name: "Dam Pulaw",
     image:
       "https://etimg.etb2bimg.com/thumb/msid-96285119,imgsize-58228,width-1200,height=765,overlay-etbrandequity/research/2022-saw-23-increase-in-searches-for-guilt-free-food-options-swiggy-report.jpg",
-
+      id:"5" ,
     price: " Rs 699/-",
     rating: "5.9",
     cusines: ["Dam Pulaw ", " Indian", "Madrasi"],
@@ -181,24 +181,22 @@ const restrauntList = [
     name: "Biryani",
     image:
       "https://etimg.etb2bimg.com/thumb/msid-96285119,imgsize-58228,width-1200,height=765,overlay-etbrandequity/research/2022-saw-23-increase-in-searches-for-guilt-free-food-options-swiggy-report.jpg",
-
+      id:"6" ,
     price: " Rs 650/-",
     rating: "5.2",
     cusines: ["Biryani ", " Indian"],
   },
 ];
 
-const RestrauntCard = ({image, name, price,rating,cusines}) => {
-  // const {=restraunt;
+const RestrauntCard = ({ image, name, price, rating, cusines }) => {
   return (
     <>
       <div className="card">
-        <img src={image} alt="" />
-        <h1>{name}</h1>
-        <h2>{price}</h2>
-        <h3>{rating}</h3>
-        <h4>{cusines}</h4>
-        
+        <img  src={image} alt="" />
+        <h1 >{name}</h1>
+        <h2 >{price}</h2>
+        <h3 >{rating}</h3>
+        <h4 >{cusines}</h4>
       </div>
     </>
   );
@@ -209,15 +207,21 @@ const Body = () => {
     <>
       <div className="restrauntlist">
         {/* {RestrauntCard(restrauntList[0])} */}
-        <RestrauntCard name={restrauntList[0].name} image={restrauntList[0].image} price={restrauntList[0].price} cusines={restrauntList[0].cusines}  rating={restrauntList[0].rating} />
 
-        <RestrauntCard name={restrauntList[1].name} image={restrauntList[1].image} price={restrauntList[1].price} cusines={restrauntList[1].cusines}  rating={restrauntList[1].rating} />
-        
-        <RestrauntCard name={restrauntList[2].name} image={restrauntList[2].image} price={restrauntList[2].price} cusines={restrauntList[2].cusines}  rating={restrauntList[2].rating} />
-
-        <RestrauntCard name={restrauntList[3].name} image={restrauntList[3].image} price={restrauntList[3].price} cusines={restrauntList[3].cusines}  rating={restrauntList[3].rating} />
+        {restrauntList.map((data)=>{
+          return (<RestrauntCard {...data} key={data.id}/>)
+        })}
 
 
+
+{/* 
+        <RestrauntCard {...restrauntList[0]} />
+
+        <RestrauntCard {...restrauntList[1]} />
+
+        <RestrauntCard {...restrauntList[2]} />
+
+        <RestrauntCard {...restrauntList[3]} /> */}
 
         {/* <RestrauntCard restraunt={restrauntList[3]} />
         <RestrauntCard restraunt={restrauntList[4]} />
