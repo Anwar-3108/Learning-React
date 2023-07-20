@@ -4,7 +4,7 @@ import HeaderComp from "./components/Header";
 
 import Footer from "./components/Footer";
 
-import Cardlist from "./components/CardList";
+import Cardlist from "./components/Cardlist";
 
 const App = () => {
   return (
