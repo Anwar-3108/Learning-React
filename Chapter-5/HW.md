@@ -19,5 +19,6 @@ it uses re-concileation and re-conciliation uses "Diff" algorithem. if we are ch
 
 
 Q.5> ?
+A.5> 
 
 
