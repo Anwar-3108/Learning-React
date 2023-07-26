@@ -1,3 +1,10 @@
+
+*{
+   
+    box-sizing: border-box;
+
+}
+
 .header-div{
     display: flex;
     justify-content: space-between;
@@ -20,7 +27,7 @@
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
     margin-top: 1rem;
-    
+    overflow: hidden;
 }
 .card-div{
     width: 250px;
@@ -28,6 +35,7 @@
     border-radius: 2%;
     margin-top: 5%;
     padding: 10px;
+    overflow: hidden;
 }
 .card-div>.img-div>img{
     width: 100%;

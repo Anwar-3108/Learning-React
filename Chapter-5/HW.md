@@ -18,7 +18,32 @@ and some body changed the variable in other component so react wont know that wh
 it uses re-concileation and re-conciliation uses "Diff" algorithem. if we are changing the perticulal element so in the virtual DOM only that perticalr element will be rerendered.
 
 
-Q.5> ?
+Q.5> What is optional chaining?
 A.5> 
+
+
+Q.6> What is one way data binding and two way data binding?
+
+A.6> 
+
+
+Q.7> What is reactvariable and why do we need it?
+
+A.7> 
+
+
+
+Q.8> What is shimmer UI?
+
+A.8> 
+
+
+
+Q.9> What is conditional rendering?
+
+A.9>  
+
+Q.10? What is js Expresion and statements ?
+A.10  ? 
 
 

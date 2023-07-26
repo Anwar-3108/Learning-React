@@ -1,14 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import restrauntList from "../config";
 import Card from "./Card";
+import Shimmer from "./Shimmer";
 
 // const searchText = "kgf";
 const Cardlist = () => {
   const [searchText, setSearchText] = useState("");
 
-  const [restraunts, setResraunts] = useState(restrauntList);
+  const [allRestraunts, setAllResraunts] = useState([]);
+  const [filterdRestraunt, setFilterdReastraunt] = useState([]);
 
-  console.log(restraunts);
+  // const [restraunts, setResraunts] = useState(restrauntList);
+
+  // empty dependency array => once after render
+  // dep array [serchText] => once after initial render + everytime after rerender (my searchText changes)
+
+  useEffect(() => {
+    // API CALL
+    getRestraunt();
+  },[]);
+
+  async function getRestraunt() {
+    try {
+      // console.log("getRestraunt")
+      const res = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      );
+      const jsonData = await res.json();
+      console.log(jsonData);
+
+      // optional chaining
+      setAllResraunts(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setFilterdReastraunt(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+console.log("I'm console :",jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // console.log(restraunts);
   // const [searchClick, setSearchClick] = useState("false");
 
   // const changeClick = () => {
@@ -16,12 +48,18 @@ const Cardlist = () => {
 
   // };
 
-  const filterData = (searchText, restraunts) => {
-    return restraunts.filter((resArrData) => {
-      return resArrData.name.toLowerCase().includes(searchText.toLowerCase());
+  // restraunts.map((e) => {
+  //   console.log(e);
+  // });
+
+  const filterData = (searchText, allRestraunts) => {
+    return allRestraunts.filter((resArrData) => {
+      return resArrData.info.name.toLowerCase().includes(searchText);
     });
   };
-  return (
+  return allRestraunts.length===0? (
+    <Shimmer />
+  ) : (
     <>
       <br />
       <div className="search-div">
@@ -41,9 +79,11 @@ const Cardlist = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterData(searchText, restraunts);
-            
-            setResraunts(data);
+            const data = filterData(searchText, allRestraunts);
+         setFilterdReastraunt(data);
+
+
+            console.log(data);
           }}
         >
           SEARCH
@@ -52,8 +92,12 @@ const Cardlist = () => {
       </div>
       <br />
       <div className="cardList">
-        {restraunts.map((elem) => {
-          return <Card {...elem} key={elem.id} />;
+        {filterdRestraunt.map((elem) => {
+          return (
+            <>
+              <Card {...elem.info} key={elem.info.id} />
+            </>
+          );
         })}
       </div>
     </>
