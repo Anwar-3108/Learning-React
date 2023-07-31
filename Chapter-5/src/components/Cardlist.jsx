@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import restrauntList from "../config";
+// import restrauntList from "../config";
 import Card from "./Card";
 import Shimmer from "./Shimmer";
+import { swiggyProductApi } from "../config";
+// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-// const searchText = "kgf";
 const Cardlist = () => {
   const [searchText, setSearchText] = useState("");
 
@@ -18,23 +20,35 @@ const Cardlist = () => {
   useEffect(() => {
     // API CALL
     getRestraunt();
-  },[]);
+  }, []);
 
   async function getRestraunt() {
     try {
       // console.log("getRestraunt")
-      const res = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
-      );
+      const res = await fetch(swiggyProductApi);
       const jsonData = await res.json();
       console.log(jsonData);
 
-      // optional chaining
-      setAllResraunts(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setFilterdReastraunt(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      //       // optional chaining
+      //       setAllResraunts(jsonData?.data?.cards[2]?.data?.data?.cards);
+      //       setFilterdReastraunt(jsonData?.data?.cards[2]?.data?.data?.cards);
 
-console.log("I'm console :",jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      // console.log("I'm console :",jsonData?.data?.cards[2]?.data?.data?.cards);
 
+      setAllResraunts(
+        jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+      setFilterdReastraunt(
+        jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+
+      console.log(
+        "I'm console :",
+        jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
     } catch (error) {
       console.log(error);
     }
@@ -54,10 +68,10 @@ console.log("I'm console :",jsonData?.data?.cards[2]?.card?.card?.gridElements?.
 
   const filterData = (searchText, allRestraunts) => {
     return allRestraunts.filter((resArrData) => {
-      return resArrData.info.name.toLowerCase().includes(searchText);
+      return resArrData?.info?.name?.toLowerCase().includes(searchText);
     });
   };
-  return allRestraunts.length===0? (
+  return allRestraunts?.length === 0 ? (
     <Shimmer />
   ) : (
     <>
@@ -80,8 +94,7 @@ console.log("I'm console :",jsonData?.data?.cards[2]?.card?.card?.gridElements?.
           className="search-btn"
           onClick={() => {
             const data = filterData(searchText, allRestraunts);
-         setFilterdReastraunt(data);
-
+            setFilterdReastraunt(data);
 
             console.log(data);
           }}
@@ -92,10 +105,15 @@ console.log("I'm console :",jsonData?.data?.cards[2]?.card?.card?.gridElements?.
       </div>
       <br />
       <div className="cardList">
-        {filterdRestraunt.map((elem) => {
+        {filterdRestraunt?.map((elem) => {
           return (
             <>
-              <Card {...elem.info} key={elem.info.id} />
+              <Link to={`/restaurant/${elem?.info?.id}`} key={elem?.info?.id}>
+                {" "}
+                <Card {...elem?.info} />
+              </Link>
+
+              {/* <Card {...elem.data} key={elem.data.id} /> */}
             </>
           );
         })}

@@ -43,7 +43,11 @@ Q.9> What is conditional rendering?
 
 A.9>  
 
-Q.10? What is js Expresion and statements ?
-A.10  ? 
+Q.10> What is js Expresion and statements ?
+
+A.10> 
 
 
+Q.11> What is client side routing nd server side routing? 
+ 
+ A.11 >
