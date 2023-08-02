@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 import Shimmer from "./Shimmer";
 import { swiggyProductApi } from "../config";
-// import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 
 const Cardlist = () => {
   const [searchText, setSearchText] = useState("");
@@ -29,11 +29,19 @@ const Cardlist = () => {
       const jsonData = await res.json();
       console.log(jsonData);
 
+
+
+
+
+      // ==================
       //       // optional chaining
       //       setAllResraunts(jsonData?.data?.cards[2]?.data?.data?.cards);
       //       setFilterdReastraunt(jsonData?.data?.cards[2]?.data?.data?.cards);
 
-      // console.log("I'm console :",jsonData?.data?.cards[2]?.data?.data?.cards);
+      // console.log("I'm console1 :",jsonData?.data?.cards[2]?.data?.data?.cards);
+
+
+
 
       setAllResraunts(
         jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
@@ -54,17 +62,7 @@ const Cardlist = () => {
     }
   }
 
-  // console.log(restraunts);
-  // const [searchClick, setSearchClick] = useState("false");
-
-  // const changeClick = () => {
-  //   searchClick == "true" ? setSearchClick("false") : setSearchClick("true");
-
-  // };
-
-  // restraunts.map((e) => {
-  //   console.log(e);
-  // });
+  
 
   const filterData = (searchText, allRestraunts) => {
     return allRestraunts.filter((resArrData) => {
@@ -111,6 +109,7 @@ const Cardlist = () => {
               <Link to={`/restaurant/${elem?.info?.id}`} key={elem?.info?.id}>
                 {" "}
                 <Card {...elem?.info} />
+                {/* <Card {...elem.data} key={elem.data.id} /> */}
               </Link>
 
               {/* <Card {...elem.data} key={elem.data.id} /> */}

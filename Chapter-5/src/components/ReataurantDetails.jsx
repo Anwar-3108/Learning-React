@@ -1,32 +1,17 @@
-import { useEffect, useState } from "react";
+
 import { useParams, useRouteError } from "react-router-dom";
-import { img_cdn_url, menuApi} from "../config";
+import { img_cdn_url } from "../config";
 import Shimmer from "./Shimmer";
+import useRestaurant from "../useRestaurant";
+
 
 const ReataurantDetails = () => {
   const { id } = useParams();
-  const [restaurant, setRestaurant] = useState({});
   const err = useRouteError();
   console.log(err);
 
-  const getRestaurantInfo = async () => {
-    try {
-      const response = await fetch(menuApi + id);
+  const restaurant = useRestaurant(id)
 
-      const json = await response.json();
-      console.log(
-        "I'm console from restaurant comp",
-        json?.data?.cards[0].card?.card?.info
-      );
-      setRestaurant(json?.data?.cards[0].card?.card?.info);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getRestaurantInfo();
-  }, []);
 
   return !restaurant ? (
     <Shimmer />
