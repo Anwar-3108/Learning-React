@@ -51,3 +51,7 @@ A.10>
 Q.11> What is client side routing nd server side routing? 
  
  A.11 >
+
+ Q.12 > What is Custom Hook?
+
+ A.12> https://react.dev/learn/reusing-logic-with-custom-hooks
