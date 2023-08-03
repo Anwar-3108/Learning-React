@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { menuApi } from "./config";
+import { menuApi } from "../config";
 
 
 

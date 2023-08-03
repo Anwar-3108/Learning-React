@@ -55,3 +55,5 @@ Q.11> What is client side routing nd server side routing?
  Q.12 > What is Custom Hook?
 
  A.12> https://react.dev/learn/reusing-logic-with-custom-hooks
+
+ Q.13> What is Chunking /code splitting / Dynamic bundling / Lazy loading /on demand loading /dynamic import

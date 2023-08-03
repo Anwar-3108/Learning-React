@@ -2,7 +2,7 @@
 import { useParams, useRouteError } from "react-router-dom";
 import { img_cdn_url } from "../config";
 import Shimmer from "./Shimmer";
-import useRestaurant from "../useRestaurant";
+import useRestaurant from "../utils/useRestaurant";
 
 
 const ReataurantDetails = () => {

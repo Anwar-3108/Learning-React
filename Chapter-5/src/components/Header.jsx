@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeaderComp = () => {
   const [isLogin, setlogin] = useState(false);
+// console.log(props.children)
 
   return (
     <>
@@ -27,6 +28,7 @@ const HeaderComp = () => {
             <Link to='/cart'>
               <li>Cart</li>
             </Link>
+            <Link to='/offers'><li>Offers</li></Link>
           </ul>
         </div>
         {isLogin ? (
@@ -48,6 +50,16 @@ const HeaderComp = () => {
         )}
       </div>
     </>
+
+
+// <----------------- Dynamic Header-------------------->
+// children.map((el,i)=>{
+//   <Link to={el.path} element={<el.element></el.element>}>
+
+//   </Link>
+// })
+    
+
   );
 };
 export default HeaderComp;

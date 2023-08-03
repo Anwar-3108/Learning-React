@@ -4,6 +4,7 @@ import Card from "./Card";
 import Shimmer from "./Shimmer";
 import { swiggyProductApi } from "../config";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 
 const Cardlist = () => {
@@ -62,7 +63,11 @@ const Cardlist = () => {
     }
   }
 
-  
+  const isOnline = useOnline();
+  if (!isOnline) {
+
+    return <h1>You are offline , please check your internet connection</h1>
+  }
 
   const filterData = (searchText, allRestraunts) => {
     return allRestraunts.filter((resArrData) => {
