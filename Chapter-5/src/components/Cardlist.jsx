@@ -79,8 +79,8 @@ const Cardlist = () => {
   ) : (
     <>
       <br />
-      <div className="search-div">
-        <input
+      <div className="justify-center align-middle flex">
+        <input className="px-2 py-1 rounded-xl w-96"
           type="search"
           name=""
           placeholder="Search..."
@@ -94,7 +94,7 @@ const Cardlist = () => {
         />
 
         <button
-          className="search-btn"
+          className="bg-gradient-to-r from-cyan-500 to-blue-500  text-white px-2 py-1 rounded-xl ml-2"
           onClick={() => {
             const data = filterData(searchText, allRestraunts);
             setFilterdReastraunt(data);
@@ -107,7 +107,7 @@ const Cardlist = () => {
         {/* <h1>{searchClick}</h1> */}
       </div>
       <br />
-      <div className="cardList">
+      <div className="grid grid-cols-4 gap-4  justify-center align-middle m-16">
         {filterdRestraunt?.map((elem) => {
           return (
             <>

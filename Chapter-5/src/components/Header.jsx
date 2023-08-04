@@ -7,32 +7,32 @@ const HeaderComp = () => {
 
   return (
     <>
-      <div className="header-div">
-        <h2>Food Villa</h2>
+      <div className="flex justify-between bg-gray-300 ">
+        <h2 className="text-3xl font-bold py-10">Food Villa</h2>
 
         <div className="nav-links">
-          <ul>
+          <ul className="flex py-10">
             <Link to="/">
-              <li>Home </li>
+              <li className="px-6  ">Home </li>
             </Link>
             <Link to="/about">
-              <li>About</li>
+              <li className="px-6 ">About</li>
             </Link>
             <Link to='/contact'>
-              <li>Contact</li>
+              <li className="px-6 ">Contact</li>
             </Link>
 
             <Link to='/category' >
-              <li>Category</li>
+              <li className="px-6 ">Category</li>
             </Link>
             <Link to='/cart'>
-              <li>Cart</li>
+              <li className="px-6 ">Cart</li>
             </Link>
-            <Link to='/offers'><li>Offers</li></Link>
+            <Link to='/offers'><li className="px-6  ">Offers</li></Link>
           </ul>
         </div>
         {isLogin ? (
-          <button
+          <button className="px-6  "
             onClick={() => {
               setlogin(false);
             }}
@@ -40,7 +40,7 @@ const HeaderComp = () => {
             Login
           </button>
         ) : (
-          <button
+          <button className="px-6  "
             onClick={() => {
               setlogin(true);
             }}
