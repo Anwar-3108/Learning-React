@@ -113,7 +113,7 @@ const Cardlist = () => {
             <>
               <Link to={`/restaurant/${elem?.info?.id}`} key={elem?.info?.id}>
                 {" "}
-                <Card {...elem?.info} />
+                <Card {...elem?.info}  />
                 {/* <Card {...elem.data} key={elem.data.id} /> */}
               </Link>
 

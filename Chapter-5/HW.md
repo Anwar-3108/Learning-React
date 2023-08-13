@@ -57,3 +57,13 @@ Q.11> What is client side routing nd server side routing?
  A.12> https://react.dev/learn/reusing-logic-with-custom-hooks
 
  Q.13> What is Chunking /code splitting / Dynamic bundling / Lazy loading /on demand loading /dynamic import
+
+ A.13> 
+
+ Q.14> What is contextAPI and why do we use it?
+
+ A.14>
+
+ Q.15> What is redux, defference between redux and redux-toolkit?
+
+ A.14> 
